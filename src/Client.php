@@ -91,7 +91,7 @@ class Client
 
     private function validate(string $uri, string $namespace = null): void
     {
-        if ( $namespace !== null && preg_match('^[a-z]+$', $namespace) === false ) {
+        if ( $namespace !== null && preg_match('/^[a-z]+$/', $namespace) === false ) {
             throw new InvalidArgumentException('Namespace can only contain lowercase characters.');
         }
 
